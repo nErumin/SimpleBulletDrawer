@@ -13,42 +13,75 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="헤더 파일\Shape">
+      <UniqueIdentifier>{a003ce68-1769-432b-9024-ba99edc3568f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Shape">
+      <UniqueIdentifier>{4a66d81c-79f7-44e0-ae88-c4329a557cb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Actor">
+      <UniqueIdentifier>{a73ce70f-9b4c-4373-ac16-23a5895e4ecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Actor">
+      <UniqueIdentifier>{707d3ed7-7396-4b92-9f6f-04e4a51e6a74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Shader">
+      <UniqueIdentifier>{a1485aa5-2aa0-47d2-9efe-2683a4cb14b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Shader">
+      <UniqueIdentifier>{5ec948a3-69ba-4c75-ba81-34f43047e46f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Models.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Circle.cpp">
+      <Filter>소스 파일\Shape</Filter>
     </ClCompile>
     <ClCompile Include="RegularTriangle.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Shape</Filter>
     </ClCompile>
     <ClCompile Include="Square.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Shape</Filter>
     </ClCompile>
-    <ClCompile Include="Circle.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Actor.cpp">
+      <Filter>소스 파일\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>소스 파일\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>소스 파일\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>소스 파일\Shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Models.hpp">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="IShape.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Point2D.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="RegularTriangle.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Square.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Shape</Filter>
     </ClInclude>
     <ClInclude Include="Circle.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularTriangle.h">
+      <Filter>헤더 파일\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>헤더 파일\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>헤더 파일\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>헤더 파일\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>헤더 파일\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Program.h">
+      <Filter>헤더 파일\Shader</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -162,18 +162,23 @@ copy $(SolutionDir)\lib\GLFW\x64\*.dll $(SolutionDir)\$(IntermediateOutputPath)\
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Models.cpp" />
+    <ClCompile Include="Program.cpp" />
     <ClCompile Include="RegularTriangle.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Square.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="Character.h" />
     <ClInclude Include="Circle.h" />
-    <ClInclude Include="Models.hpp" />
     <ClInclude Include="IShape.h" />
-    <ClInclude Include="Point2D.h" />
+    <ClInclude Include="Program.h" />
     <ClInclude Include="RegularTriangle.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="Square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
