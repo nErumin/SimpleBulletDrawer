@@ -221,7 +221,6 @@ copy $(ProjectDir)\Shader\* $(SolutionDir)\$(IntermediateOutputPath)\Shader\*</C
     <ClInclude Include="RegularTriangle.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="Shader.h" />
-    <ClInclude Include="SplitBullet.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="StageFactory.h" />
     <ClInclude Include="StaticEnemy.h" />
