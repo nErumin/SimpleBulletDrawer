@@ -36,7 +36,7 @@ void StaticEnemy::Update()
             5 :
             6;
 
-        auto actorPtr = CreateChildActor<NWayBullet>(bulletSteps, -20.0f, 30.0f, 0.05f);
+        auto actorPtr = CreateChildActor<NWayBullet>(bulletSteps, -90.0f, 30.0f, 0.05f);
         actorPtr->Color() = bulletColor;
         
         ActorDrawer::Instance().RegisterActor(actorPtr.get());
