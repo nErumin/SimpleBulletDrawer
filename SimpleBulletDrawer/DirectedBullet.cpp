@@ -26,10 +26,18 @@ std::shared_ptr<Shape::IShape> DirectedBullet::Shape() const
 
 void DirectedBullet::Initialize()
 {
-    // Fill here!
+    auto parentActorPtr = ParentActor();
+
+    if (parentActorPtr)
+    {
+        Position() = parentActorPtr->Position();
+    }
+
+    Velocity().x = glm::cos(mFireRadians) * mBulletSpeed;
+    Velocity().y = glm::sin(mFireRadians) * mBulletSpeed;
 }
 
 void DirectedBullet::Update()
 {
-    // Fill here!
+    Position() += Velocity();
 }
