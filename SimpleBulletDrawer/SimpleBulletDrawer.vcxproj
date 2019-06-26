@@ -186,6 +186,9 @@ copy $(ProjectDir)\Shader\* $(SolutionDir)\$(IntermediateOutputPath)\Shader\*</C
     <ClCompile Include="ActorDrawer.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="CircularBullet.cpp" />
+    <ClCompile Include="StaticCircularEnemy.cpp" />
+    <ClCompile Include="CircularStageFactory.cpp" />
     <ClCompile Include="DirectedBullet.cpp" />
     <ClCompile Include="DirectionStageFactory.cpp" />
     <ClCompile Include="ForwardingEnemy.cpp" />
@@ -207,6 +210,9 @@ copy $(ProjectDir)\Shader\* $(SolutionDir)\$(IntermediateOutputPath)\Shader\*</C
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="CircularBullet.h" />
+    <ClInclude Include="StaticCircularEnemy.h" />
+    <ClInclude Include="CircularStageFactory.h" />
     <ClInclude Include="DirectedBullet.h" />
     <ClInclude Include="DirectionStageFactory.h" />
     <ClInclude Include="ForwardingEnemy.h" />
