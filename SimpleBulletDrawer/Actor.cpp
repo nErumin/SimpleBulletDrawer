@@ -53,7 +53,7 @@ glm::mat4 Actor::TransformationMatrix() const
     return transformationMatrix;
 }
 
-std::vector<std::shared_ptr<Actor>>& Actor::ChildActors() noexcept
+std::unordered_set<std::shared_ptr<Actor>>& Actor::ChildActors() noexcept
 {
     return mChildActors;
 }

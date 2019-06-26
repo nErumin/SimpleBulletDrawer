@@ -4,7 +4,7 @@
 #include "ActorDrawer.h"
 #include "glm/glm.hpp"
 #include <memory>
-#include <vector>
+#include <unordered_set>
 
 namespace Shape
 {
@@ -32,7 +32,7 @@ namespace Object
         template <typename TActor, typename... Args>
         std::shared_ptr<TActor> CreateChildActor(Args&&... args);
      
-        std::vector<std::shared_ptr<Actor>>& ChildActors() noexcept;
+        std::unordered_set<std::shared_ptr<Actor>>& ChildActors() noexcept;
         Actor* ParentActor() noexcept;
     private:
         glm::vec3 mPosition{ 0.0f, 0.0f, 0.0f };
@@ -40,7 +40,7 @@ namespace Object
         glm::vec3 mRotation{ 0.0f, 0.0f, 0.0f };
 
         Actor* mParentActor = nullptr;
-        std::vector<std::shared_ptr<Actor>> mChildActors;
+        std::unordered_set<std::shared_ptr<Actor>> mChildActors;
     };
 
     template<typename TActor, typename...Args>
