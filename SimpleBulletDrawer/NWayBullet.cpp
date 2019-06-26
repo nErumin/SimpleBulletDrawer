@@ -4,32 +4,6 @@
 
 #include <list>
 
-namespace
-{
-    std::list<float> MakeBulletDegress(size_t bulletSteps, float centerDegree, float rotationDegree)
-    {
-        std::list<float> bulletDegrees;
-
-        if (bulletSteps % 2 == 0)
-        {
-            bulletDegrees.push_back(centerDegree - rotationDegree / 2.0f);
-            bulletDegrees.push_back(centerDegree + rotationDegree / 2.0f);
-        }
-        else
-        {
-            bulletDegrees.push_back(centerDegree);
-        }
-
-        while (bulletDegrees.size() != bulletSteps)
-        {
-            bulletDegrees.push_front(bulletDegrees.front() - rotationDegree);
-            bulletDegrees.push_back(bulletDegrees.back() + rotationDegree);
-        }
-
-        return bulletDegrees;
-    }
-}
-
 using namespace Object;
 
 NWayBullet::NWayBullet(size_t bulletSteps, float centerDegree, float rotationDegree, float bulletSpeed)
