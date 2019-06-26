@@ -49,7 +49,7 @@ namespace Object
         auto actorPtr = std::make_shared<TActor>(std::forward<Args>(args)...);
 
         actorPtr->mParentActor = this;
-        mChildActors.push_back(actorPtr);
+        mChildActors.insert(actorPtr);
 
         return actorPtr;
     }
