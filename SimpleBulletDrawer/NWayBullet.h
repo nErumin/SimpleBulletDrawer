@@ -11,14 +11,12 @@ namespace Object
         NWayBullet(size_t bulletSteps, float centerDegree, float rotationDegree, float bulletSpeed);
     public:
         glm::vec3& Velocity() noexcept;
-        glm::vec3& Color() noexcept;
 
         std::shared_ptr<Shape::IShape> Shape() const override;
         void Initialize() override;
         void Update() override;
     private:
         glm::vec3 mVelocity{ 0, 0, 0 };
-        glm::vec3 mBulletColor{ 1, 0, 1 };
 
         size_t mBulletSteps;
         float mCenterDegree;

@@ -12,14 +12,12 @@ namespace Object
         DirectedBullet(float fireDegree, float bulletSpeed);
     public:
         glm::vec3& Velocity() noexcept;
-        glm::vec3& Color() noexcept;
 
         std::shared_ptr<Shape::IShape> Shape() const override;
         void Initialize() override;
         void Update() override;
     private:
         glm::vec3 mVelocity{ 0, 0, 0 };
-        glm::vec3 mBulletColor{ 1, 0, 1 };
 
         float mFireRadians;
         float mBulletSpeed;

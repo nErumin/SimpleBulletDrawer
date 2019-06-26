@@ -22,6 +22,8 @@ namespace Object
         glm::vec3& Position() noexcept;
         glm::vec3& Scale() noexcept;
         glm::vec3& Rotation() noexcept;
+        glm::vec3& Color() noexcept;
+        const glm::vec3& Color() const noexcept;
 
         glm::mat4 TransformationMatrix() const;
         
@@ -38,6 +40,7 @@ namespace Object
         glm::vec3 mPosition{ 0.0f, 0.0f, 0.0f };
         glm::vec3 mScale{ 1.0f, 1.0f, 1.0f };
         glm::vec3 mRotation{ 0.0f, 0.0f, 0.0f };
+        glm::vec3 mColor{ 1.0f, 1.0f, 1.0f };
 
         Actor* mParentActor = nullptr;
         std::unordered_set<std::shared_ptr<Actor>> mChildActors;

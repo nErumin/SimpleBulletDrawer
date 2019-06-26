@@ -35,6 +35,16 @@ glm::vec3& Actor::Rotation() noexcept
     return mRotation;
 }
 
+glm::vec3& Actor::Color() noexcept
+{
+    return mColor;
+}
+
+const glm::vec3& Actor::Color() const noexcept
+{
+    return mColor;
+}
+
 glm::mat4 Actor::TransformationMatrix() const
 {
     glm::mat4 transformationMatrix{ 1.0f };
