@@ -1,9 +1,24 @@
 #include "Actor.h"
 #include "glm/gtx/transform.hpp"
+#include "ActorDrawer.h"
 
 using namespace Object;
 
-Actor::~Actor() = default;
+Actor::Actor()
+{
+}
+
+Actor::~Actor()
+{
+    using namespace Management;
+
+    ActorDrawer::Instance().EnqueueDeregisterActor(this);
+
+    for (auto& childActorPtr : mChildActors)
+    {
+        ActorDrawer::Instance().EnqueueDeregisterActor(childActorPtr.get());
+    }
+}
 
 glm::vec3& Actor::Position() noexcept
 {
@@ -36,4 +51,14 @@ glm::mat4 Actor::TransformationMatrix() const
     transformationMatrix = glm::translate(transformationMatrix, mPosition);
 
     return transformationMatrix;
+}
+
+std::vector<std::shared_ptr<Actor>>& Actor::ChildActors() noexcept
+{
+    return mChildActors;
+}
+
+Actor* Actor::ParentActor() noexcept
+{
+    return mParentActor;
 }
