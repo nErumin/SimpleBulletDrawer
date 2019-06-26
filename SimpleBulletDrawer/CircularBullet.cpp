@@ -57,5 +57,11 @@ void CircularBullet::Initialize()
 
 void CircularBullet::Update()
 {
-    // Fill here!
+    Position() += CenterVelocity();
+
+    mCirculationBullet->Position().x = Position().x + mRadius * glm::cos(glm::radians(mAngle));
+    mCirculationBullet->Position().y = Position().y + mRadius * glm::sin(glm::radians(mAngle));
+
+    mAngle += AngularVelocity();
+    mRadius += RadiusVelocity();
 }
