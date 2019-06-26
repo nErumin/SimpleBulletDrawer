@@ -1,10 +1,6 @@
 #include "NWayStageFactory.h"
-#include "Time.h"
 #include "StaticEnemy.h"
 #include "ActorDrawer.h"
-#include "glm/glm.hpp"
-#include <vector>
-#include <utility>
 
 using namespace Factory;
 
