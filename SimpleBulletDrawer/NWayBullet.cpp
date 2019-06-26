@@ -57,10 +57,30 @@ std::shared_ptr<Shape::IShape> NWayBullet::Shape() const
 
 void NWayBullet::Initialize()
 {
-    // Fill here!
+    auto parentActorPtr = ParentActor();
+
+    if (parentActorPtr)
+    {
+        Position() = parentActorPtr->Position();
+    }
+
+    auto bulletDegrees = MakeBulletDegress(mBulletSteps, mCenterDegree, mRotationDegree);
+
+    for (float& bulletDegree : bulletDegrees)
+    {
+        auto bulletPtr = CreateChildActor<DirectedBullet>(bulletDegree, mBulletSpeed);
+        bulletPtr->Color() = mBulletColor;
+
+        Management::ActorDrawer::Instance().RegisterActor(bulletPtr.get());
+    }
 }
 
 void NWayBullet::Update()
 {
-    // Fill here!
+    auto parentActorPtr = ParentActor();
+
+    if (parentActorPtr)
+    {
+        Position() = parentActorPtr->Position();
+    }
 }
