@@ -25,5 +25,45 @@ void StaticSplitBulletEnemy::Update()
 {
     using namespace Management;
 
-    // Fill here!
+    mBulletCreationTimer += Time::DeltaTime();
+
+    if (mBulletCreationTimer > mFirePeriod)
+    {
+        auto leftBulletPtr = CreateChildActor<DirectedBullet>(-45.0f, 0.05f);
+        leftBulletPtr->Color() = glm::vec3{ 0.4, 0.4, 0.7 };
+
+        auto rightBulletPtr = CreateChildActor<DirectedBullet>(-135.0f, 0.05f);
+        rightBulletPtr->Color() = glm::vec3{ 0, 1, 1 };
+
+        ActorDrawer::Instance().RegisterActor(leftBulletPtr.get());
+        ActorDrawer::Instance().RegisterActor(rightBulletPtr.get());
+
+        mCreatedDirectBullets.emplace(leftBulletPtr, Time::LastRenderedTime());
+        mCreatedDirectBullets.emplace(rightBulletPtr, Time::LastRenderedTime());
+
+        mBulletCreationTimer -= mFirePeriod;
+    }
+
+    for (auto bulletIterator = mCreatedDirectBullets.begin();
+        bulletIterator != mCreatedDirectBullets.end();
+        /* noop */)
+    {
+        if (Time::LastRenderedTime() - bulletIterator->second >= 1.0f)
+        {
+            auto directedBullet = bulletIterator->first;
+            auto nWayBullet = directedBullet->CreateChildActor<NWayBullet>(5, -90.0f, 30.0f, 0.05f);
+
+            nWayBullet->Position() = directedBullet->Position();
+            nWayBullet->Color() = directedBullet->Color();
+
+            ActorDrawer::Instance().EnqueueDeregisterActor(directedBullet.get());
+            ActorDrawer::Instance().RegisterActor(nWayBullet.get());
+
+            bulletIterator = mCreatedDirectBullets.erase(bulletIterator);
+        }
+        else
+        {
+            ++bulletIterator;
+        }
+    }
 }
