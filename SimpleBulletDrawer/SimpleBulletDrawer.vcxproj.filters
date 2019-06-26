@@ -117,6 +117,15 @@
     <ClCompile Include="SplitStageFactory.cpp">
       <Filter>소스 파일\Factory</Filter>
     </ClCompile>
+    <ClCompile Include="CircularBullet.cpp">
+      <Filter>소스 파일\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="CircularStageFactory.cpp">
+      <Filter>소스 파일\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticCircularEnemy.cpp">
+      <Filter>소스 파일\Object\Actor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IShape.h">
@@ -187,6 +196,15 @@
     </ClInclude>
     <ClInclude Include="SplitStageFactory.h">
       <Filter>헤더 파일\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularBullet.h">
+      <Filter>헤더 파일\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularStageFactory.h">
+      <Filter>헤더 파일\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticCircularEnemy.h">
+      <Filter>헤더 파일\Object\Actor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,6 +12,7 @@
 #include "DirectionStageFactory.h"
 #include "NWayStageFactory.h"
 #include "SplitStageFactory.h"
+#include "CircularStageFactory.h"
 
 namespace
 {
@@ -141,7 +142,7 @@ int main(int argc, char* argv[])
 
     using namespace Management;
 
-    auto factoryPtr = std::make_unique<Factory::SplitStageFactory>();
+    auto factoryPtr = std::make_unique<Factory::CircularStageFactory>();
     ActorDrawer::Instance().Initialize();
 
     Time::LastRenderedTime() = glfwGetTime();
