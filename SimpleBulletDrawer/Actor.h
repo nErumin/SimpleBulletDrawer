@@ -22,22 +22,25 @@ namespace Object
         glm::vec3& Position() noexcept;
         glm::vec3& Scale() noexcept;
         glm::vec3& Rotation() noexcept;
+        glm::vec3& Color() noexcept;
+        const glm::vec3& Color() const noexcept;
 
         glm::mat4 TransformationMatrix() const;
         
         virtual std::shared_ptr<Shape::IShape> Shape() const = 0;
         virtual void Initialize() = 0;
         virtual void Update() = 0;
-    protected:
+
         template <typename TActor, typename... Args>
-        std::shared_ptr<TActor> CreateChildActor(Args&&... args);
-     
+        std::shared_ptr<TActor> CreateChildActor(Args&& ... args);
+    protected:
         std::unordered_set<std::shared_ptr<Actor>>& ChildActors() noexcept;
         Actor* ParentActor() noexcept;
     private:
         glm::vec3 mPosition{ 0.0f, 0.0f, 0.0f };
         glm::vec3 mScale{ 1.0f, 1.0f, 1.0f };
         glm::vec3 mRotation{ 0.0f, 0.0f, 0.0f };
+        glm::vec3 mColor{ 1.0f, 1.0f, 1.0f };
 
         Actor* mParentActor = nullptr;
         std::unordered_set<std::shared_ptr<Actor>> mChildActors;

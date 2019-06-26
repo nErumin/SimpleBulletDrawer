@@ -38,16 +38,12 @@ NWayBullet::NWayBullet(size_t bulletSteps, float centerDegree, float rotationDeg
       mRotationDegree{ rotationDegree },
       mBulletSpeed{ bulletSpeed }
 {
+    Color() = glm::vec3{ 1, 0, 1 };
 }
 
 glm::vec3& NWayBullet::Velocity() noexcept
 {
     return mVelocity;
-}
-
-glm::vec3& NWayBullet::Color() noexcept
-{
-    return mBulletColor;
 }
 
 std::shared_ptr<Shape::IShape> NWayBullet::Shape() const
