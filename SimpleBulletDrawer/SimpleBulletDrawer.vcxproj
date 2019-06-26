@@ -99,7 +99,12 @@
     <PostBuildEvent>
       <Command>copy $(SolutionDir)\lib\GLEW\x86\*.dll $(SolutionDir)\$(IntermediateOutputPath)\*
 copy $(SolutionDir)\lib\GLFW\x86\*.dll $(SolutionDir)\$(IntermediateOutputPath)\*
-</Command>
+
+if not exist $(SolutionDir)\$(IntermediateOutputPath)\Shader (
+mkdir $(SolutionDir)\$(IntermediateOutputPath)\Shader
+)
+
+copy $(ProjectDir)\Shader\* $(SolutionDir)\$(IntermediateOutputPath)\Shader\*</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -116,7 +121,12 @@ copy $(SolutionDir)\lib\GLFW\x86\*.dll $(SolutionDir)\$(IntermediateOutputPath)\
     <PostBuildEvent>
       <Command>copy $(SolutionDir)\lib\GLEW\x64\*.dll $(SolutionDir)\$(IntermediateOutputPath)\*
 copy $(SolutionDir)\lib\GLFW\x64\*.dll $(SolutionDir)\$(IntermediateOutputPath)\*
-</Command>
+
+if not exist $(SolutionDir)\$(IntermediateOutputPath)\Shader (
+mkdir $(SolutionDir)\$(IntermediateOutputPath)\Shader
+)
+
+copy $(ProjectDir)\Shader\* $(SolutionDir)\$(IntermediateOutputPath)\Shader\*</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -137,7 +147,12 @@ copy $(SolutionDir)\lib\GLFW\x64\*.dll $(SolutionDir)\$(IntermediateOutputPath)\
     <PostBuildEvent>
       <Command>copy $(SolutionDir)\lib\GLEW\x86\*.dll $(SolutionDir)\$(IntermediateOutputPath)\*
 copy $(SolutionDir)\lib\GLFW\x86\*.dll $(SolutionDir)\$(IntermediateOutputPath)\*
-</Command>
+
+if not exist $(SolutionDir)\$(IntermediateOutputPath)\Shader (
+mkdir $(SolutionDir)\$(IntermediateOutputPath)\Shader
+)
+
+copy $(ProjectDir)\Shader\* $(SolutionDir)\$(IntermediateOutputPath)\Shader\*</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -158,28 +173,59 @@ copy $(SolutionDir)\lib\GLFW\x86\*.dll $(SolutionDir)\$(IntermediateOutputPath)\
     <PostBuildEvent>
       <Command>copy $(SolutionDir)\lib\GLEW\x64\*.dll $(SolutionDir)\$(IntermediateOutputPath)\*
 copy $(SolutionDir)\lib\GLFW\x64\*.dll $(SolutionDir)\$(IntermediateOutputPath)\*
-</Command>
+
+if not exist $(SolutionDir)\$(IntermediateOutputPath)\Shader (
+mkdir $(SolutionDir)\$(IntermediateOutputPath)\Shader
+)
+
+copy $(ProjectDir)\Shader\* $(SolutionDir)\$(IntermediateOutputPath)\Shader\*</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="ActorDrawer.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="DirectedBullet.cpp" />
+    <ClCompile Include="DirectionStageFactory.cpp" />
+    <ClCompile Include="ForwardingEnemy.cpp" />
+    <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NullShape.cpp" />
+    <ClCompile Include="NWayBullet.cpp" />
+    <ClCompile Include="NWayStageFactory.cpp" />
+    <ClCompile Include="OrthographicCamera.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="RegularTriangle.cpp" />
+    <ClCompile Include="Screen.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Square.cpp" />
+    <ClCompile Include="StaticEnemy.cpp" />
+    <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="DirectedBullet.h" />
+    <ClInclude Include="DirectionStageFactory.h" />
+    <ClInclude Include="ForwardingEnemy.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="NullShape.h" />
+    <ClInclude Include="NWayBullet.h" />
+    <ClInclude Include="NWayStageFactory.h" />
+    <ClInclude Include="OrthographicCamera.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="IShape.h" />
+    <ClInclude Include="ActorDrawer.h" />
     <ClInclude Include="Program.h" />
     <ClInclude Include="RegularTriangle.h" />
+    <ClInclude Include="Screen.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="SplitBullet.h" />
     <ClInclude Include="Square.h" />
+    <ClInclude Include="StageFactory.h" />
+    <ClInclude Include="StaticEnemy.h" />
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

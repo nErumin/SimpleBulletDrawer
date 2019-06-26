@@ -19,17 +19,35 @@
     <Filter Include="소스 파일\Shape">
       <UniqueIdentifier>{4a66d81c-79f7-44e0-ae88-c4329a557cb1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\Actor">
-      <UniqueIdentifier>{a73ce70f-9b4c-4373-ac16-23a5895e4ecc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\Actor">
-      <UniqueIdentifier>{707d3ed7-7396-4b92-9f6f-04e4a51e6a74}</UniqueIdentifier>
-    </Filter>
     <Filter Include="헤더 파일\Shader">
       <UniqueIdentifier>{a1485aa5-2aa0-47d2-9efe-2683a4cb14b1}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\Shader">
       <UniqueIdentifier>{5ec948a3-69ba-4c75-ba81-34f43047e46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Management">
+      <UniqueIdentifier>{7633b0a4-2a93-47e6-92b9-54b17b250b1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Management">
+      <UniqueIdentifier>{6c28a427-1c4c-4298-a028-3de73a3032bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Object">
+      <UniqueIdentifier>{deb49f1e-34f0-4c44-9516-787ea60678f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Object\Actor">
+      <UniqueIdentifier>{a73ce70f-9b4c-4373-ac16-23a5895e4ecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Object">
+      <UniqueIdentifier>{b4decb4d-e31a-4792-a3fa-a49942064499}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Object\Actor">
+      <UniqueIdentifier>{707d3ed7-7396-4b92-9f6f-04e4a51e6a74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Factory">
+      <UniqueIdentifier>{4f9870b7-3045-42a2-b0af-b8c897fc1ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Factory">
+      <UniqueIdentifier>{547d4f1c-24e2-49db-8474-80afc9cd0c5c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,16 +64,52 @@
       <Filter>소스 파일\Shape</Filter>
     </ClCompile>
     <ClCompile Include="Actor.cpp">
-      <Filter>소스 파일\Actor</Filter>
+      <Filter>소스 파일\Object\Actor</Filter>
     </ClCompile>
     <ClCompile Include="Character.cpp">
-      <Filter>소스 파일\Actor</Filter>
+      <Filter>소스 파일\Object\Actor</Filter>
     </ClCompile>
     <ClCompile Include="Shader.cpp">
       <Filter>소스 파일\Shader</Filter>
     </ClCompile>
     <ClCompile Include="Program.cpp">
       <Filter>소스 파일\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorDrawer.cpp">
+      <Filter>소스 파일\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Screen.cpp">
+      <Filter>소스 파일\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="OrthographicCamera.cpp">
+      <Filter>소스 파일\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>소스 파일\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>소스 파일\Management</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectedBullet.cpp">
+      <Filter>소스 파일\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardingEnemy.cpp">
+      <Filter>소스 파일\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionStageFactory.cpp">
+      <Filter>소스 파일\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="NWayBullet.cpp">
+      <Filter>소스 파일\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="NullShape.cpp">
+      <Filter>소스 파일\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticEnemy.cpp">
+      <Filter>소스 파일\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="NWayStageFactory.cpp">
+      <Filter>소스 파일\Factory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,16 +126,58 @@
       <Filter>헤더 파일\Shape</Filter>
     </ClInclude>
     <ClInclude Include="Actor.h">
-      <Filter>헤더 파일\Actor</Filter>
+      <Filter>헤더 파일\Object\Actor</Filter>
     </ClInclude>
     <ClInclude Include="Character.h">
-      <Filter>헤더 파일\Actor</Filter>
+      <Filter>헤더 파일\Object\Actor</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
       <Filter>헤더 파일\Shader</Filter>
     </ClInclude>
     <ClInclude Include="Program.h">
       <Filter>헤더 파일\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorDrawer.h">
+      <Filter>헤더 파일\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="OrthographicCamera.h">
+      <Filter>헤더 파일\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Screen.h">
+      <Filter>헤더 파일\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>헤더 파일\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>헤더 파일\Management</Filter>
+    </ClInclude>
+    <ClInclude Include="StageFactory.h">
+      <Filter>헤더 파일\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectedBullet.h">
+      <Filter>헤더 파일\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="ForwardingEnemy.h">
+      <Filter>헤더 파일\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionStageFactory.h">
+      <Filter>헤더 파일\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="NWayBullet.h">
+      <Filter>헤더 파일\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="NWayStageFactory.h">
+      <Filter>헤더 파일\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="NullShape.h">
+      <Filter>헤더 파일\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticEnemy.h">
+      <Filter>헤더 파일\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="SplitBullet.h">
+      <Filter>헤더 파일\Object\Actor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
