@@ -28,10 +28,10 @@ namespace Object
         virtual std::shared_ptr<Shape::IShape> Shape() const = 0;
         virtual void Initialize() = 0;
         virtual void Update() = 0;
-    protected:
+
         template <typename TActor, typename... Args>
-        std::shared_ptr<TActor> CreateChildActor(Args&&... args);
-     
+        std::shared_ptr<TActor> CreateChildActor(Args&& ... args);
+    protected:
         std::unordered_set<std::shared_ptr<Actor>>& ChildActors() noexcept;
         Actor* ParentActor() noexcept;
     private:
