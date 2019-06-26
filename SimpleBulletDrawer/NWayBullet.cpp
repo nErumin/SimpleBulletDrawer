@@ -65,7 +65,7 @@ void NWayBullet::Initialize()
     for (float& bulletDegree : bulletDegrees)
     {
         auto bulletPtr = CreateChildActor<DirectedBullet>(bulletDegree, mBulletSpeed);
-        bulletPtr->Color() = mBulletColor;
+        bulletPtr->Color() = Color();
 
         Management::ActorDrawer::Instance().RegisterActor(bulletPtr.get());
     }
